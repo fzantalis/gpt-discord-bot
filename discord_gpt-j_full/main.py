@@ -203,5 +203,5 @@ async def shutdown(context):
     exit()
 
   
-EXECUTES THE BOT WITH THE LOADED TOKEN. 
+#EXECUTES THE BOT WITH THE LOADED TOKEN. 
 client.run(TOKEN)
