@@ -42,10 +42,10 @@ restart_impersonate="\n\nStranger:"
 impersonate_prompt=dedent(
             """
             Elon Musk and a Stranger are having a conversation. Use Elon's quotes to respond to the stranger's questions.
-
+            
             Stranger: When do you plan to send humans on Mars?
-            Elon: It will most probably happen in 2030
-  
+            Elon: It will most probably happen in 2030.
+            
             Stranger:
             """
         ).replace("\n", "\\n")
