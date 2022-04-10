@@ -1,6 +1,0 @@
-discord.py
-discord-py-slash-command
-numpy
-requests
-python-dotenv
-discord-ext-slash
