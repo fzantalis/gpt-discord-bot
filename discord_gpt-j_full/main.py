@@ -21,17 +21,15 @@ api_engine = "fairseq_gpt_13B"
 start_chatbot="\nJarvis:"
 restart_chatbot="\n\nHuman:"
 chatbot_prompt=dedent(
-            """
-            This is a conversation between an intelligent and sarcastic bot named Jarvis and a human. The bot is always willing to answer the human's questions and it usually quotes famous song lyrics.
+            """This is a conversation between an intelligent and sarcastic bot named Jarvis and a human. The bot is always willing to answer the human's questions and it usually quotes famous song lyrics.
 
             Human: What is your name?
             Jarvis: My name is What? My name is Who? My name is Chika-chika Jarvis
-            
+
             Human: What is your favorite YouTube channel?
             Jarvis: It is Tech to me About it for sure! 
-            
-            Human:
-            """
+
+            Human:"""
         ).replace("\n", "\\n")
 
 #######################################
@@ -40,14 +38,12 @@ chatbot_prompt=dedent(
 start_impersonate="\nElon:"
 restart_impersonate="\n\nStranger:"
 impersonate_prompt=dedent(
-            """
-            Elon Musk and a Stranger are having a conversation. Use Elon's quotes to respond to the stranger's questions.
-  
+            """Elon Musk and a Stranger are having a conversation. Use Elon's quotes to respond to the stranger's questions.
+
             Stranger: When do you plan to send humans on Mars?
             Elon: It will most probably happen in 2030
-  
-            Stranger:
-            """
+
+            Stranger:"""
         ).replace("\n", "\\n")
 
 #######################################
@@ -56,10 +52,9 @@ impersonate_prompt=dedent(
 start_html="\nCode:"
 restart_html="\n\nDescription:"
 html_prompt=dedent(
-            """
-            Description: a red button that says stop
+            """Description: a red button that says stop
             Code: <button style=color:white; background-color:red;>Stop</button>
-  
+
             Description: a blue box that contains yellow circles with red borders
             Code: <div style=background-color: blue; padding: 20px;><div style=background-color: yellow; border: 5px solid red; border-radius: 50%; padding: 20px; width: 100px; height: 100px;>"""
         ).replace("\n", "\\n")
@@ -69,11 +64,9 @@ html_prompt=dedent(
 #######################################
 start_sql="\nAnswer:"
 restart_sql="\n\nQuestion:"
-sql_prompt=dedent(
-            """
-            Question: Fetch the companies that have less than five people in it.
+sql_prompt=dedent("""Question: Fetch the companies that have less than five people in it.
             Answer: SELECT COMPANY, COUNT(EMPLOYEE_ID) FROM Employee GROUP BY COMPANY HAVING COUNT(EMPLOYEE_ID) < 5;
-            
+
             Question: Show all companies along with the number of employees in each department
             Answer: SELECT COMPANY, COUNT(COMPANY) FROM Employee GROUP BY COMPANY;
 
@@ -91,7 +84,7 @@ restart_sequence=restart_chatbot
 def ask(question, chat_log=None):
   if chat_log is None: 
     chat_log = session_prompt 
-  prompt_text = f'{chat_log}{restart_sequence}: {question}{start_sequence}:'
+  prompt_text = f'{chat_log}{restart_sequence} {question}{start_sequence}'
   response = requests.post(api_url + "/v1/engines/" + api_engine + "/completions", headers = { "Authorization": "Bearer " + api_key }, json = { "prompt": prompt_text, "max_tokens": 200, "temperature": 0.5, "top_p": 1, "frequency_penalty": 0.5, "presence_penalty": 0.0, "stop":["\n"]})
   resp = response.json()
   if "text" in resp: 
