@@ -26,3 +26,13 @@
 | `discord_gpt-3 ` | Κώδικας που υλοποιεί την επικοινωνία με το GPT-3 API και το Discord API |
 | `discord_gpt-j`  | Κώδικας που υλοποιεί την επικοινωνία με το GPT-j API μέσω του TextSynth και το Discord API |
 | `discord_gpt-j_full` | Ο κώδικας του τελικού project με όλες τις λειτουργίες που περιγράφονται παραπάνω |
+
+# Χρήσιμοι σύνδεσμοι:
+- [GPT-3 Playground](https://beta.openai.com/playground)
+- [TextSynth GPT-j Playground](https://textsynth.com/playground.html)
+- [Πως να φτιάξεις ένα Discord Bot](https://discordpy.readthedocs.io/en/stable/discord.html)
+- [Discord Applications](https://discord.com/developers/applications)
+- [Replit Web IDE](https://replit.com)
+- [Δημιουργία Heroku App](https://dashboard.heroku.com/new-app)
+
+
