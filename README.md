@@ -27,6 +27,13 @@
 | `discord_gpt-j`  | Κώδικας που υλοποιεί την επικοινωνία με το GPT-j API μέσω του TextSynth και το Discord API |
 | `discord_gpt-j_full` | Ο κώδικας του τελικού project με όλες τις λειτουργίες που περιγράφονται παραπάνω |
 
+## Environmental Variables
+Πριν τρέξουμε τα παραδείγματα μας, θα πρέπει να σετάρουμε τις παρακάτω μεταβλητές.
+- DISCORD_GUILD
+- DISCORD_TOKEN
+- TEXTSYNTH_API_SECRET_KEY
+
+
 # Χρήσιμοι σύνδεσμοι:
 - [GPT-3 Playground](https://beta.openai.com/playground)
 - [TextSynth GPT-j Playground](https://textsynth.com/playground.html)
