@@ -35,6 +35,7 @@
 
 
 # Χρήσιμοι σύνδεσμοι:
+- [Η παρουσίαση του Workshop](https://drive.google.com/file/d/1KSsn1t4cqvzxo69evouKAaJjX223dzck/view?usp=sharing)
 - [GPT-3 Playground](https://beta.openai.com/playground)
 - [TextSynth GPT-j Playground](https://textsynth.com/playground.html)
 - [Πως να φτιάξεις ένα Discord Bot](https://discordpy.readthedocs.io/en/stable/discord.html)
